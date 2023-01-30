@@ -52,6 +52,10 @@ Dataset contains real-time current readings of a 3-phase AC motor (3.2hp) motor 
 Detect anomaly and alert defects from an unstructured data pool received from current and voltage sensors of a 3-phase induction motor (Medium Voltage) at a rate of 10K - 15K instances per second.
 Structure/process the data, create condition indicators, create an ML model, and create features to train the model.
 
+### **Link to Dataset:**
+
+https://drive.google.com/drive/folders/1d70I-XacHhA7i7MsVQa-iFJvp2nTiayA?usp=share_link
+
 # **Flow of the Project:**
 This script appears to be implementing an auto encoder, a type of neural network used for unsupervised learning, for anomaly detection. The script reads in several text files from a specified directory, concatenates them into a single Data Frame, fills any missing values with 0, normalizes the data using the MinMaxScaler, and splits the data into training and test sets. The script then creates an auto encoder model with a specified number of neurons in the encoding layer and trains the model on the training data. The script then uses the model to make predictions on the test data, calculates the reconstruction error for each sample, and defines a threshold for the reconstruction error based on the 90th percentile of the mean squared error (MSE). The script then classifies samples as normal or anomalous based on whether their reconstruction error is greater than the threshold, and prints a confusion matrix, accuracy score, and classification report to evaluate the model's performance.
 
